@@ -9,6 +9,7 @@
  */
 int main(void)
 {
+int len = 0;
 	/*
 	int len;
 	int len2;
@@ -16,8 +17,8 @@ int main(void)
 	void *addr;
 */
 	/*_printf("%c\n", 'S');*/
-	_printf("Hola Mundo\n", 'S');
-	_printf("Hola %c Mundo\n", 'S');
+	len = _printf("Hola Mundo\n");
+	printf("%d", len);
 /*	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
 	ui = (unsigned int)INT_MAX + 1024;

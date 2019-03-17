@@ -5,10 +5,10 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 
-void print_char(va_list);
-/* void print_int(va_list);
-void print_string(va_list);
-void print_double(va_list);*/
+int print_char(va_list);
+/* int print_int(va_list);
+int print_string(va_list);
+int print_double(va_list);*/
 
 /**
  * struct type - An structure for each format
@@ -19,7 +19,7 @@ void print_double(va_list);*/
 typedef struct printer
 {
   char format;
-  void (*func)(va_list);
+  int (*func)(va_list);
 } printer_t;
 
 #define PRINTER_LENGTH 1
