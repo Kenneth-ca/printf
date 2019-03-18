@@ -9,6 +9,7 @@
  */
 int main(void)
 {
+int len = 0;
 	/*
 	int len;
 	int len2;
@@ -18,8 +19,15 @@ int main(void)
 
 	//_printf("Hola Mundo\n", 'S');
 	//_printf("Hola %c Mundo\n", 'S');
-	_printf("Character:[%c]\n", 'H');
-	printf("Character:[%c]\n", 'H');
+	len = _printf("Character:[%c]\n", 'H');
+	printf("%d\n", len);
+	len = printf("Character:[%c]\n", 'H');
+	printf("%d\n", len);
+	/*_printf("%c\n", 'S');*/
+	len = _printf("Hola Mundo\n");
+	printf("%d\n", len);
+	len = printf("Hola Mundo\n");
+	printf("%d\n", len);
 /*	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
 	ui = (unsigned int)INT_MAX + 1024;

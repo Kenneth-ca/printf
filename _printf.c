@@ -10,6 +10,7 @@
  */
 int _printf(const char *format, ...)
 {
+	int length = 0;
 	printer_t printers[] = {
 		{'c', print_char}
 	};
@@ -25,17 +26,17 @@ int _printf(const char *format, ...)
 	while (format[i] != '\0')
 	{
 		if (format[i] != '%' && putchar_flag)
-			_putchar(format[i]);
+			length += _putchar(format[i]);
 		else
 			putchar_flag = 0;
 		if (!putchar_flag && format[i] != '%')
 			for (j = 0; j < PRINTER_LENGTH; j++)
 				if (printers[j].format == format[i])
 				{
-					printers[j].func(&params);
+					length += printers[j].func(&params);
 					putchar_flag = 1;
 				}
 		i++;
 	}
-	return (0);
+	return (length);
 }

@@ -7,8 +7,9 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-void print_char(va_list *param)
+int print_char(va_list *params)
 {
-	char c = va_arg(*param, int);
+	char c = va_arg(*params, int);
 	_putchar(c);
+	return (1);
 }
