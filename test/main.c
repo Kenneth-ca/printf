@@ -19,6 +19,8 @@ int len = 0;
 
 	/*_printf("Hola Mundo\n", 'S');
 	*_printf("Hola %c Mundo\n", 'S');*/
+	len = _printf("Integer:[%i]\n", 3012);
+	printf("%d\n", len);
 	len = _printf("Character:[%c]\n", 'H');
 	printf("%d\n", len);
 	len = printf("Character:[%c]\n", 'H');

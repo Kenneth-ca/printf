@@ -10,9 +10,23 @@
  */
 int print_int(va_list *param)
 {
-	int i = 0;
+	int i = 0, cont = 0;
 
 	i = va_arg(*param, int);
-	_putchar(i);
-	return (i);
+	while (i / 10)
+	{
+		if (i < 0)
+		{
+			putchar('-');
+			i = -i;
+			_putchar(i + '0');
+		}
+		_putchar(i + '0');
+		i = i / 10;
+		cont++;
+	}
+	i = i % 10;
+	_putchar(i + '0');
+	cont++;
+	return (cont);
 }
