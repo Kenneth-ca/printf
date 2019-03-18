@@ -13,7 +13,8 @@ int _printf(const char *format, ...)
 	printer_t printers[] = {
 		{'c', print_char},
 		{'s', print_string},
-		{'i', print_int}
+		{'i', print_int},
+		{'d', print_double}
 	};
 
 	va_list params;
