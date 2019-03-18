@@ -20,6 +20,7 @@ int _printf(const char *format, ...);
 int print_char(va_list *);
 int print_string(va_list *);
 int print_int(va_list *);
+int print_unsigned_int(va_list *);
 
-#define PRINTER_LENGTH 3
+#define PRINTER_LENGTH 4
 #endif
