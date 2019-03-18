@@ -9,16 +9,14 @@
  */
 int main(void)
 {
-int len = 0;
-	/*
 	int len;
 	int len2;
-	unsigned int ui;
+/*	unsigned int ui;
 	void *addr;
 */
 
-	/*_printf("Hola Mundo\n", 'S');
-	*_printf("Hola %c Mundo\n", 'S');*/
+	_printf("Hola Mundo\n", 'S');
+	_printf("Hola %c Mundo\n", 'S');
 	len = _printf("Character:[%c]\n", 'H');
 	printf("%d\n", len);
 	len = printf("Character:[%c]\n", 'H');
@@ -28,9 +26,11 @@ int len = 0;
 	printf("%d\n", len);
 	len = printf("Hola Mundo\n");
 	printf("%d\n", len);
-/*	len = _printf("Let's try to printf a simple sentence.\n");
+	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
-	ui = (unsigned int)INT_MAX + 1024;
+	_printf("String:[%s]\n", "I am a string !");
+	printf("String:[%s]\n", "I am a string !");	
+/*	ui = (unsigned int)INT_MAX + 1024;
 	addr = (void *)0x7ffe637541f0;
 	_printf("Length:[%d, %i]\n", len, len);
 	printf("Length:[%d, %i]\n", len2, len2);
