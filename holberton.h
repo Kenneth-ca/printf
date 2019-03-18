@@ -21,6 +21,7 @@ int print_char(va_list *);
 int print_string(va_list *);
 int print_int(va_list *);
 int print_unsigned_int(va_list *);
+int print_double(va_list *);
 
-#define PRINTER_LENGTH 4
+#define PRINTER_LENGTH 5
 #endif
