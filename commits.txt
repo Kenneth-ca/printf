@@ -1,8 +1,8 @@
 List of commits for printf project
 
-<Ricardo>
-T0:
+<kyeeh>
+T0: 1
 
-<Kenneth>
+<kenneth>
 
-T1:
+T1: 2
