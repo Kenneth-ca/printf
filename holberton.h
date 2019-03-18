@@ -20,5 +20,5 @@ int _printf(const char *format, ...);
 int print_char(va_list *);
 int print_int(va_list *);
 
-#define PRINTER_LENGTH 1
+#define PRINTER_LENGTH 2
 #endif
