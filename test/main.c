@@ -17,8 +17,8 @@ int main(void)
 	void *addr;
 */
 
-	//_printf("Hola Mundo\n", 'S');
-	//_printf("Hola %c Mundo\n", 'S');
+	/*_printf("Hola Mundo\n", 'S');
+	*_printf("Hola %c Mundo\n", 'S');*/
 	len = _printf("Character:[%c]\n", 'H');
 	printf("%d\n", len);
 	len = printf("Character:[%c]\n", 'H');
