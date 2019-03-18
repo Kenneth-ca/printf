@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 		else
 			putchar_flag = 0;
 		if (!putchar_flag && format[i] != '%')
-			for (j = 0; j < PRINTER_LENGTH; j++)
+			for (j = 0; j < 4; j++)
 				if (printers[j].format == format[i])
 				{
 					length += printers[j].func(&params);
