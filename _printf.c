@@ -18,9 +18,10 @@ int _printf(const char *format, ...)
 		{'i', print_int},
 		{'s', print_string},
 		{'d', print_double}, */	
-	va_list arg;
+	va_list params;
 	int i = 0, putchar_flag = 1, j;
 
+	va_start(params, format);
 	while (format[i] != '\0')
 	{
 		if (format[i] != '%' && putchar_flag)
@@ -31,7 +32,7 @@ int _printf(const char *format, ...)
 			for (j = 0; j < PRINTER_LENGTH; j++)
 				if (printers[j].format == format[i])
 				{
-					printers[j].func(arg);
+					printers[j].func(&params);
 					putchar_flag = 1;
 				}
 		i++;

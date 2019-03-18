@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdarg.h>
 #include "holberton.h"
 /**
@@ -8,9 +7,8 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-void print_char(va_list param)
+void print_char(va_list *param)
 {
-	char c = va_arg(param, int);
-	printf("%c\n", c);
+	char c = va_arg(*param, int);
 	_putchar(c);
 }
