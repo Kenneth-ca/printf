@@ -15,7 +15,7 @@ int main(void)
 	void *addr;
 */
 
-	len = _printf("Integer:[%i]\n", 3012);
+	len = _printf("Integer:[%i]\n", 90878);
 	printf("%d\n", len);
 	_printf("Hola Mundo\n", 'S');
 	_printf("Hola %c Mundo\n", 'S');
@@ -30,6 +30,8 @@ int main(void)
 	printf("%d\n", len);
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
+	_printf("Length:[%d, %i]\n", len, len);
+	printf("Length:[%d, %i]\n", len2, len2);
 	_printf("String:[%s]\n", "I am a string !");
 	printf("String:[%s]\n", "I am a string !");	
 /*	ui = (unsigned int)INT_MAX + 1024;
