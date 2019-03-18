@@ -18,7 +18,8 @@ typedef struct printer
 int _putchar(char c);
 int _printf(const char *format, ...);
 int print_char(va_list *);
+int print_string(va_list *);
 int print_int(va_list *);
 
-#define PRINTER_LENGTH 2
+#define PRINTER_LENGTH 3
 #endif

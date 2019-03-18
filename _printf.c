@@ -1,5 +1,4 @@
 #include <stdarg.h>
-#include <stdlib.h>
 #include "holberton.h"
 /**
  * _printf - prints according to format
@@ -13,6 +12,7 @@ int _printf(const char *format, ...)
 	int length = 0;
 	printer_t printers[] = {
 		{'c', print_char},
+		{'s', print_string},
 		{'i', print_int}
 	};
 
