@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdarg.h>
 #include "holberton.h"
 /**
@@ -52,6 +51,6 @@ int print_int(va_list *param)
 		negative = 1;
 	len += length_i (i, len);
 	repeat_i(i);
-	len = len + negative;
+	len = len + negative + 1;
 	return (len);
 }
