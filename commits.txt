@@ -1,8 +1,0 @@
-List of commits for printf project
-
-<kyeeh>
-T0: 1
-
-<kenneth>
-
-T1: 2
