@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-int len = 0;
+	int len = 0;
 	/*
 	int len;
 	int len2;
