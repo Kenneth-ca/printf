@@ -9,7 +9,7 @@
  */
 int select_printer(char s, va_list *params)
 {
-	int i, formats = 8;
+	int i, formats = 9;
 	printer_t printers[] = {
 		{'c', print_char},
 		{'s', print_string},
@@ -18,7 +18,8 @@ int select_printer(char s, va_list *params)
 		{'d', print_double},
 		{'o', print_octal},
 		{'x', print_mini_hexa},
-		{'X', print_hexa}
+		{'X', print_hexa},
+		{'b', print_binary}
 	};
 
 	for (i = 0; i < formats; i++)
