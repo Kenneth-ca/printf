@@ -1,13 +1,13 @@
 #include <stdarg.h>
 #include "holberton.h"
 /**
- * length_d - find the length of an integer
+ * length_i - prints recursively
  * @i: The number to get the length
- * @len: number length
+ * @len: The number length
  *
  * Return: On success length.
  */
-int length_d(int i, int len)
+int length_i(unsigned int i, int len)
 {
 	while (i / 10)
 	{
@@ -18,39 +18,41 @@ int length_d(int i, int len)
 }
 
 /**
- * repeat_d - prints recursively
+ * repeat_i - prints recursively
  * @i: The number to be printed
  *
  * Return: nothing.
  */
-void repeat_d(int i)
+void repeat_i(unsigned int i)
 {
-	if (i < 0)
-	{
-		_putchar('-');
-		i = -i;
-	}
 	if (i / 10)
 	{
-		repeat_d(i / 10);
+		repeat_i(i / 10);
 	}
 	_putchar(i % 10 + '0');
 }
 /**
- * print_double - writes the integer d
+ * print_double - writes the double i
  * @param: The name for va_list
  *
- * Return: lenght of the integer
+ * Return: On success 1.
  */
 int print_double(va_list *param)
 {
 	int i = 0, len = 0, negative = 0;
+	unsigned int limit;
 
 	i = va_arg(*param, int);
 	if (i < 0)
+	{
+		_putchar('-');
+		limit = -i;
 		negative = 1;
-	len += length_d(i, len);
-	repeat_d(i);
+	}
+	else
+		limit = i;
+	len += length_i(limit, len);
+	repeat_i(limit);
 	len = len + negative + 1;
 	return (len);
 }

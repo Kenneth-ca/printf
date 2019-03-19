@@ -7,7 +7,7 @@
  *
  * Return: On success length.
  */
-int length_i(int i, int len)
+int length_i(unsigned int i, int len)
 {
 	while (i / 10)
 	{
@@ -23,13 +23,8 @@ int length_i(int i, int len)
  *
  * Return: nothing.
  */
-void repeat_i(int i)
+void repeat_i(unsigned int i)
 {
-	if (i < 0)
-	{
-		_putchar('-');
-		i = -i;
-	}
 	if (i / 10)
 	{
 		repeat_i(i / 10);
@@ -41,17 +36,23 @@ void repeat_i(int i)
  * @param: The name for va_list
  *
  * Return: On success 1.
- * On error, -1 is returned.
  */
 int print_int(va_list *param)
 {
 	int i = 0, len = 0, negative = 0;
+	unsigned int limit;
 
 	i = va_arg(*param, int);
 	if (i < 0)
+	{
+		_putchar('-');
+		limit = -i;
 		negative = 1;
-	len += length_i(i, len);
-	repeat_i(i);
+	}
+	else
+		limit = i;
+	len += length_i(limit, len);
+	repeat_i(limit);
 	len = len + negative + 1;
 	return (len);
 }
