@@ -15,6 +15,7 @@ typedef struct printer
 	int (*func)(va_list *);
 } printer_t;
 
+int select_printer(char s, va_list *);
 int _putchar(char c);
 int _printf(const char *format, ...);
 int print_char(va_list *);
@@ -25,6 +26,7 @@ int print_double(va_list *);
 int print_octal(va_list *);
 int print_hexa(va_list *);
 int print_mini_hexa(va_list *);
+int print_binary(va_list *params);
 
 #define PRINTER_LENGTH 5
 #endif

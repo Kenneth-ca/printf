@@ -51,6 +51,6 @@ int print_double(va_list *param)
 		negative = 1;
 	len += length_d(i, len);
 	repeat_d(i);
-	len = len + negative;
+	len = len + negative + 1;
 	return (len);
 }
