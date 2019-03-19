@@ -1,5 +1,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
 #include "holberton.h"
 /**
  * print_string - writes the string
@@ -13,7 +15,10 @@ int print_string(va_list *params)
 	char *str = va_arg(*params, char *);
 
 	if (str == NULL)
-		str = "(null)\0";	
+	{
+		str = "(null)";	
+		return(write(1,str,6));
+	}
 	while (str[length] != '\0')
 	{
 		_putchar(str[length]);

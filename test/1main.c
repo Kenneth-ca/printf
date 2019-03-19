@@ -68,7 +68,7 @@ int main(void)
 	printf("------------------\n");
 
 	len = _printf("Este es %s cero \n", (char *)0);
-	len2 = printf("%Este es %s cero \n", (char *)0);
+	len2 = printf("Este es %s cero \n", (char *)0);
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
 	return (0);
