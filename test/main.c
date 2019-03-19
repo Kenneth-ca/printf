@@ -9,6 +9,8 @@
  */
 int main(void)
 {
+
+/*   %, dos %%, %!\n, Null, %k	*/
 	int len;
 	int len2;
 	unsigned int ui;
@@ -24,7 +26,6 @@ int main(void)
 	printf("%d\n", len);
 	len = printf("Character:[%c]\n", 'H');
 	printf("%d\n", len);
-	/*_printf("%c\n", 'S');*/
 	len = _printf("Hola %d Mundo%i\n", 356, -356);
 	printf("%d\n", len);
 	len = printf("Hola Mundo\n");
@@ -44,8 +45,12 @@ int main(void)
 	len = printf("Unsigned:[%u]\n", ui);
 	len2 = _printf("_Unsigned:[%u]\n", ui);
 	printf("Length:[%d, %i]\n", len, len);
-	printf("Length:[%d, %i]\n", len2, len2);	
-/*	_printf("Negative:[%d]\n", -762534);
+	printf("Length:[%d, %i]\n", len2, len2);
+	len = printf("1 %%dos %%\n");	
+	len2 = _printf("%, dos %%\n");
+	len = printf(" %, dos %%, %!\n, Null, %k\n");
+	len2 = _printf(" %, dos %%, %!\n, Null, %k\n");
+	_printf("Negative:[%d]\n", -762534);
 	printf("Negative:[%d]\n", -762534);
 	_printf("Unsigned octal:[%o]\n", ui);
 	printf("Unsigned octal:[%o]\n", ui);
@@ -61,6 +66,5 @@ int main(void)
 	printf("Len:[%d]\n", len2);
 	_printf("Unknown:[%r]\n");
 	printf("Unknown:[%r]\n");
-*/
 	return (0);
 }
