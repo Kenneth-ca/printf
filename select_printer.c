@@ -3,9 +3,8 @@
 #include "holberton.h"
 /**
  * select_printer - Selects a printer for the format and print the param.
- * @s: the format to be printed
- * @params: the params list to be printed
- * Return: the length of elements printed.
+ * @format: the format to be printed
+ * Return: the printer selected for elements to print.
  */
 printer_t select_printer(char format)
 {
