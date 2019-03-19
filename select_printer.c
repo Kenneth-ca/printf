@@ -27,7 +27,7 @@ int select_printer(char s, va_list *params)
 			return (printers[i]).func(params);
 		else
 		{
-			return (_putchar('%'));
+			/* return (_putchar('%')); */
 		}
 	}	
 	return (0);
