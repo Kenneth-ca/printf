@@ -76,5 +76,10 @@ int main(void)
 	len2 = printf("Este es %s cero \n", (char *)0);
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
+
+	len = _printf(NULL);
+	len2 = printf(NULL);
+	printf("New: %d; Real: %d\n", len, len2);
+	printf("------------------\n");
 	return (0);
 }
