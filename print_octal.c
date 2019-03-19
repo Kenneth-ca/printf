@@ -15,7 +15,7 @@ int print_base8(unsigned int value, int length)
 }
 
 /**
- * print_unsigned_int - writes the unsigned integer i
+ * print_octal - From decimal to Octal
  * @params: The name for va_list
  *
  * Return: number length.
