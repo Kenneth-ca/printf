@@ -4,6 +4,7 @@
 /**
  * length_d - find the length of an integer
  * @i: The number to get the length
+ * @len: number length
  *
  * Return: On success length.
  */
@@ -49,7 +50,7 @@ int print_double(va_list *param)
 	i = va_arg(*param, int);
 	if (i < 0)
 		negative = 1;
-	len += length_d (i, len);
+	len += length_d(i, len);
 	repeat_d(i);
 	len = len + negative;
 	return (len);

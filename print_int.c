@@ -3,6 +3,7 @@
 /**
  * length_i - prints recursively
  * @i: The number to get the length
+ * @len: The number length
  *
  * Return: On success length.
  */
@@ -49,7 +50,7 @@ int print_int(va_list *param)
 	i = va_arg(*param, int);
 	if (i < 0)
 		negative = 1;
-	len += length_i (i, len);
+	len += length_i(i, len);
 	repeat_i(i);
 	len = len + negative + 1;
 	return (len);

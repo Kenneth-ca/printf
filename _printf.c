@@ -25,19 +25,20 @@ int check_special(char check)
  */
 int _printf(const char *format, ...)
 {
-	int length = 0, length_struct = 0;
+	int length = 0, formats = 8;
 	printer_t printers[] = {
 		{'c', print_char},
 		{'s', print_string},
 		{'i', print_int},
+		{'u', print_unsigned_int},
 		{'d', print_double},
-		{'\0', '\0'}
+		{'o', print_octal},
+		{'x', print_mini_hexa},
+		{'X', print_hexa}
 	};
 	va_list params;
 	int i = 0, putchar_flag = 1, j;
 
-	while (printers[length_struct].format)
-		length_struct++;
 	va_start(params, format);
 	while (format[i] != '\0')
 	{
@@ -46,17 +47,19 @@ int _printf(const char *format, ...)
 		else
 			putchar_flag = 0;
 		if (!putchar_flag && format[i] != '%')
-			for (j = 0; j < length_struct; j++)
+			for (j = 0; j < formats; j++)
+			{
 				if (printers[j].format == format[i])
 				{
 					length += printers[j].func(&params);
-					putchar_flag = 1;
+					
 				}
 				else
 				{
 					check_special(format[i]);
-					putchar_flag = 1;
 				}
+				putchar_flag = 1;
+			}
 		i++;
 	}
 	return (length);

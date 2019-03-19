@@ -9,11 +9,12 @@
  */
 int main(void)
 {
+
+/*   %, dos %%, %!\n, Null, %k	*/
 	int len;
 	int len2;
-/*	unsigned int ui;
+	unsigned int ui;
 	void *addr;
-*/
 
 	len = _printf("Integer:[%%]\n", -123456);
 	len2 = printf("Integer (original):[%%]\n");
@@ -25,7 +26,6 @@ int main(void)
 	printf("%d\n", len);
 	len = printf("Character:[%c]\n", 'H');
 	printf("%d\n", len);
-	/*_printf("%c\n", 'S');*/
 	len = _printf("Hola %d Mundo%i\n", 356, -356);
 	printf("%d\n", len);
 	len = printf("Hola Mundo\n");
@@ -36,14 +36,22 @@ int main(void)
 	printf("Length:[%d, %i]\n", len2, len2);
 	_printf("String:[%s]\n", "I am a string !");
 	printf("String:[%s]\n", "I am a string !");	
-/*	ui = (unsigned int)INT_MAX + 1024;
+	ui = (unsigned int)INT_MAX + 1024;
 	addr = (void *)0x7ffe637541f0;
 	_printf("Length:[%d, %i]\n", len, len);
 	printf("Length:[%d, %i]\n", len2, len2);
+	printf("Unsigned:[%u]\n", ui);
+	_printf("_Unsigned:[%u]\n", ui);
+	len = printf("Unsigned:[%u]\n", ui);
+	len2 = _printf("_Unsigned:[%u]\n", ui);
+	printf("Length:[%d, %i]\n", len, len);
+	printf("Length:[%d, %i]\n", len2, len2);
+	len = printf("1 %%dos %%\n");	
+	len2 = _printf("%, dos %%\n");
+	len = printf(" %, dos %%, %!\n, Null, %k\n");
+	len2 = _printf(" %, dos %%, %!\n, Null, %k\n");
 	_printf("Negative:[%d]\n", -762534);
 	printf("Negative:[%d]\n", -762534);
-	_printf("Unsigned:[%u]\n", ui);
-	printf("Unsigned:[%u]\n", ui);
 	_printf("Unsigned octal:[%o]\n", ui);
 	printf("Unsigned octal:[%o]\n", ui);
 	_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
@@ -58,6 +66,5 @@ int main(void)
 	printf("Len:[%d]\n", len2);
 	_printf("Unknown:[%r]\n");
 	printf("Unknown:[%r]\n");
-*/	
 	return (0);
 }
