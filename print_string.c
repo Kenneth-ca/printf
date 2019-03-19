@@ -13,7 +13,7 @@ int print_string(va_list *params)
 	int length = 0;
 	char *str = va_arg(*params, char *);
 
-	//printf("Chequeando param: %s\n", str);
+	/* printf("Chequeando param: %s\n", str);*/
 	if (str == NULL)
 		str = "(null)\0";
 	while (str[length] != '\0')
