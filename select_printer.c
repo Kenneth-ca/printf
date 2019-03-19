@@ -1,9 +1,10 @@
+#include <stdio.h>
 #include <stdarg.h>
 #include "holberton.h"
 /**
  * select_printer - Selects a printer for the format and print the param.
  * @s: the format to be printed
- * @va_list: the params list to be printed
+ * @params: the params list to be printed
  * Return: the length of elements printed.
  */
 int select_printer(char s, va_list *params)
@@ -20,13 +21,10 @@ int select_printer(char s, va_list *params)
 		{'X', print_hexa},
 		{'b', print_binary}
 	};
+
 	for (i = 0; i < formats; i++)
 		if (printers[i].format == s)
-			return (printers[i]).func(params);
-		else
-		{
-			/* ToDO: find special chars */
-		}
-		
-	return (0);
+			return (printers[i].func(params));
+	/* return (_putchar('%')); */
+	return (1);
 }
