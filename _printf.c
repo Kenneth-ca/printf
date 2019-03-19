@@ -25,7 +25,7 @@ int check_special(char check)
  */
 int _printf(const char *format, ...)
 {
-	int length = 0, formats = 8;
+	int length = 0, formats = 9;
 	printer_t printers[] = {
 		{'c', print_char},
 		{'s', print_string},
@@ -34,7 +34,8 @@ int _printf(const char *format, ...)
 		{'d', print_double},
 		{'o', print_octal},
 		{'x', print_mini_hexa},
-		{'X', print_hexa}
+		{'X', print_hexa},
+		{'b', print_binary}
 	};
 	va_list params;
 	int i = 0, putchar_flag = 1, j;
