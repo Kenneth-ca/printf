@@ -12,6 +12,21 @@ int main(void)
 	int len;
 	int len2;
 
+	len = _printf("Binary: %b\n", 22);
+	len2 = printf("Binary: %d\n", 10110);
+	printf("New: %d; Real: %d\n", len, len2);
+	printf("------------------\n");
+
+	len = _printf("%");
+	len2 = printf("%");
+	printf("New: %d; Real: %d\n", len, len2);
+	printf("------------------\n");
+
+	len = _printf("Char%: % cst test\n", 'H');
+	len2 = printf("Char%: % cst test\n", 'H');
+	printf("New: %d; Real: %d\n", len, len2);
+	printf("------------------\n");
+
 	len = _printf("Si funciona: %i\n", -12345);
 	len2 = printf("Si funciona: %i\n", -12345);
 	printf("New: %d; Real: %d\n", len, len2);

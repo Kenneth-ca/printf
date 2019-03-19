@@ -26,6 +26,6 @@ int print_unsigned_int(va_list *params)
 	int length = 0, negative = 0;
 	unsigned int value = va_arg(*params, unsigned int);
 
-	length = print_number(value, length) + negative;
+	length = print_number(value, length) + negative + 1;
 	return (length);
 }
