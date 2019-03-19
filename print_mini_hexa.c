@@ -29,6 +29,6 @@ int print_mini_hexa(va_list *params)
 	int length = 0, negative = 0;
 	unsigned int value = va_arg(*params, unsigned int);
 
-	length = print_base16_mini(value, length) + negative;
+	length = print_base16_mini(value, length) + negative + 1;
 	return (length);
 }
