@@ -12,6 +12,7 @@
 int _printf(const char *format, ...)
 {
 	va_list params;
+	printer_t current_printer;
 	int i = 0, putchar_flag = 1, length = 0;
 
 	if (((format[0] == '%') && (!format[1])) || (format == NULL))
@@ -24,7 +25,8 @@ int _printf(const char *format, ...)
 				length += _putchar(format[i]);
 			else
 			{
-				length += select_printer(format[i], &params);
+				current_printer = select_printer(format[i]);
+				length += current_printer.func(&params);
 				putchar_flag = 1;
 			}
 		else

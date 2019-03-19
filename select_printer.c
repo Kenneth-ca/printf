@@ -7,9 +7,9 @@
  * @params: the params list to be printed
  * Return: the length of elements printed.
  */
-int select_printer(char s, va_list *params)
+printer_t select_printer(char format)
 {
-	int i, formats = 9;
+	int i, formats = 10;
 	printer_t printers[] = {
 		{'c', print_char},
 		{'s', print_string},
@@ -19,12 +19,13 @@ int select_printer(char s, va_list *params)
 		{'o', print_octal},
 		{'x', print_mini_hexa},
 		{'X', print_hexa},
-		{'b', print_binary}
+		{'b', print_binary},
+		{'*', print_special}
 	};
 
 	for (i = 0; i < formats; i++)
-		if (printers[i].format == s)
-			return (printers[i].func(params));
-	/* return (_putchar('%')); */
-	return (1);
+		if (printers[i].format == format)
+			return (printers[i]);
+	return (printers[i - 1]);
+	/* return (1); */
 }
