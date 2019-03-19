@@ -1,5 +1,21 @@
 #include <stdarg.h>
 #include "holberton.h"
+#include <stdio.h>
+/**
+ * check_special - prints according to format
+ * @format: The given format
+ *
+ * Return: On success 1.
+ * On error, -1 is returned.
+ */
+
+int check_special(char check)
+{
+	if (check == '%')
+		_putchar('5');
+	return (0);
+}
+
 /**
  * _printf - prints according to format
  * @format: The given format
@@ -20,7 +36,6 @@ int _printf(const char *format, ...)
 		{'x', print_mini_hexa},
 		{'X', print_hexa}
 	};
-
 	va_list params;
 	int i = 0, putchar_flag = 1, j;
 
@@ -41,7 +56,7 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					
+					check_special(format[i]);
 				}
 				putchar_flag = 1;
 			}

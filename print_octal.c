@@ -26,13 +26,6 @@ int print_octal(va_list *params)
 	int length = 0, negative = 0;
 	unsigned int value = va_arg(*params, unsigned int);
 
-	if (value < 0)
-	{
-		negative = 1;
-		value = -value;
-		/* Handle value at bit level to have the same behavior. */
-	}
-
 	length = print_base8(value, length) + negative;
 	return (length);
 }
