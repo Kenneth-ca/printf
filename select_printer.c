@@ -21,14 +21,13 @@ int select_printer(char s, va_list *params)
 		{'X', print_hexa}
 	};
 
-	printf("Chequeando select printer '%c'\n", s);
 	for (i = 0; i < formats; i++)
 	{
 		if (printers[i].format == s)
 			return (printers[i]).func(params);
 		else
 		{
-			/* ToDO: find special chars */
+			return (_putchar('%'));
 		}
 	}	
 	return (0);
