@@ -10,7 +10,5 @@
 int print_special(va_list *params)
 {
 	char c = va_arg(*params, int);
-
-	_putchar('%');
-	return (_putchar(c));
+	return (c + 0);
 }

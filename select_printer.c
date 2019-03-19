@@ -26,5 +26,4 @@ printer_t select_printer(char format)
 		if (printers[i].format == format)
 			return (printers[i]);
 	return (printers[i - 1]);
-	/* return (1); */
 }

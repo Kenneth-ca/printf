@@ -26,7 +26,10 @@ int _printf(const char *format, ...)
 			else
 			{
 				current_printer = select_printer(format[i]);
-				length += current_printer.func(&params);
+				if (current_printer.format != '*')
+					length += current_printer.func(&params);
+				else
+					length += _putchar('%') + _putchar(format[i]);
 				putchar_flag = 1;
 			}
 		else
