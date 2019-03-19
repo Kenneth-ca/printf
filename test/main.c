@@ -15,8 +15,8 @@ int main(void)
 	void *addr;
 */
 
-	len = _printf("Integer:[%i]\n", -123456);
-	len2 = printf("Integer:[%i]\n", -123456);
+	len = _printf("Integer:[%%]\n", -123456);
+	len2 = printf("Integer (original):[%%]\n");
 	printf("%d\n", len);
 	printf("%d\n", len2);
 	_printf("Hola Mundo\n", 'S');
