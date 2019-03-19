@@ -16,7 +16,7 @@ int print_rot13(va_list *params)
 
 	if (str == NULL)
 	{
-		str = "(null)";	
+		str = "(null)";
 	}
 	for (length = 0; str[length] != '\0' ; length++)
 	{
