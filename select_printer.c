@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdarg.h>
 #include "holberton.h"
 /**
@@ -19,13 +20,16 @@ int select_printer(char s, va_list *params)
 		{'x', print_mini_hexa},
 		{'X', print_hexa}
 	};
+
+	printf("Chequeando select printer '%c'\n", s);
 	for (i = 0; i < formats; i++)
+	{
 		if (printers[i].format == s)
 			return (printers[i]).func(params);
 		else
 		{
 			/* ToDO: find special chars */
 		}
-		
+	}	
 	return (0);
 }

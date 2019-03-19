@@ -24,6 +24,8 @@ int _printf(const char *format, ...)
 				length += _putchar(format[i]);
 			else
 			{
+				if (format[i] == 's')
+					printf("Format s found!\n");
 				length += select_printer(format[i], &params);
 				putchar_flag = 1;
 			}
