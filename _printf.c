@@ -9,14 +9,16 @@
  */
 int _printf(const char *format, ...)
 {
-	int length = 0, formats = 6;
+	int length = 0, formats = 8;
 	printer_t printers[] = {
 		{'c', print_char},
 		{'s', print_string},
 		{'i', print_int},
 		{'u', print_unsigned_int},
 		{'d', print_double},
-		{'o', print_octal}
+		{'o', print_octal},
+		{'x', print_mini_hexa},
+		{'X', print_hexa}
 	};
 
 	va_list params;
