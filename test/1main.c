@@ -47,7 +47,7 @@ int main(void)
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
 	
-	/*len = _printf("%s\n", NULL);*/
+	len = _printf("%s\n", NULL);
 	len2 = printf("%s\n", NULL);
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
