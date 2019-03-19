@@ -23,14 +23,8 @@ int select_printer(char s, va_list *params)
 	};
 
 	for (i = 0; i < formats; i++)
-	{
 		if (printers[i].format == s)
 			return (printers[i].func(params));
-		/* else
-		{
-			return (_putchar('%')); 
-		}
-		*/
-	}
-	return (0);
+	/* return (_putchar('%')); */
+	return (1);
 }
