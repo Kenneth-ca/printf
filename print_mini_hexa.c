@@ -18,7 +18,7 @@ int print_base16_mini(unsigned int value, int length)
 }
 
 /**
- * print_unsigned_int - writes the unsigned integer i
+ * print_mini_hexa - From decimal to Hexadecimal in smallcaps
  * @params: The name for va_list
  *
  * Return: number length.

@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -15,10 +16,7 @@ int print_string(va_list *params)
 	char *str = va_arg(*params, char *);
 
 	if (str == NULL)
-	{
-		str = "(null)";	
-		return(write(1,str,6));
-	}
+		str = "(null)";
 	while (str[length] != '\0')
 	{
 		_putchar(str[length]);

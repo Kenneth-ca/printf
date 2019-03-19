@@ -57,11 +57,6 @@ int main(void)
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
 
-	len = _printf("%c", '\0');
-	len2 = printf("%c", '\0');
-	printf("New: %d; Real: %d\n", len, len2);
-	printf("------------------\n");
-
 	len = _printf("%     \n");
 	len2 = printf("%     \n");
 	printf("New: %d; Real: %d\n", len, len2);
