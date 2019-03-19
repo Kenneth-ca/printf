@@ -9,12 +9,16 @@
  */
 int _printf(const char *format, ...)
 {
-	int length = 0;
+	int length = 0, formats = 8;
 	printer_t printers[] = {
 		{'c', print_char},
 		{'s', print_string},
 		{'i', print_int},
-		{'d', print_double}
+		{'u', print_unsigned_int},
+		{'d', print_double},
+		{'o', print_octal},
+		{'x', print_mini_hexa},
+		{'X', print_hexa}
 	};
 
 	va_list params;
@@ -28,12 +32,19 @@ int _printf(const char *format, ...)
 		else
 			putchar_flag = 0;
 		if (!putchar_flag && format[i] != '%')
-			for (j = 0; j < 4; j++)
+			for (j = 0; j < formats; j++)
+			{
 				if (printers[j].format == format[i])
 				{
 					length += printers[j].func(&params);
-					putchar_flag = 1;
+					
 				}
+				else
+				{
+					
+				}
+				putchar_flag = 1;
+			}
 		i++;
 	}
 	return (length);
