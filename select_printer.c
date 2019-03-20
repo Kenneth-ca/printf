@@ -19,7 +19,7 @@ printer_t select_printer(char format)
 		{'x', print_mini_hexa},
 		{'X', print_hexa},
 		{'b', print_binary},
-		{'*', print_special}
+		{'*', print_special},
 		{'R', print_rot13}
 	};
 
