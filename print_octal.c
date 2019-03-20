@@ -23,9 +23,9 @@ int print_base8(unsigned int value, int length)
  */
 int print_octal(va_list *params)
 {
-	int length = 0, negative = 0;
+	int length = 0;
 	unsigned int value = va_arg(*params, unsigned int);
 
-	length = print_base8(value, length) + negative + 1;
+	length = print_base8(value, length) + 1;
 	return (length);
 }
