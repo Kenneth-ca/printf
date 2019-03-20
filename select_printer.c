@@ -20,7 +20,7 @@ printer_t select_printer(char format)
 		{'X', print_hexa},
 		{'b', print_binary},
 		{'R', print_rot13},
-		{'*', print_special} /* SPECIAL PRINT MUST BE THE LAST PRINTER -- DON'T MOVE IT!!!*/
+		{'*', print_special} /* SPECIAL PRINT MUST AT LAST - DON'T MOVE IT!!!*/
 	};
 
 	for (i = 0; i < formats; i++)
