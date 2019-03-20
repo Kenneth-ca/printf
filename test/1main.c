@@ -11,7 +11,7 @@ int main(void)
 {
 	int len;
 	int len2;
-
+/*
 	len = _printf("%K\n");
 	len2 = printf("%K\n");
 	printf("New: %d; Real: %d\n", len, len2);
@@ -24,16 +24,6 @@ int main(void)
 
 	len = _printf("Binary: %b\n", 22);
 	len2 = printf("Binary: %d\n", 10110);
-	printf("New: %d; Real: %d\n", len, len2);
-	printf("------------------\n");
-
-	len = _printf("%%\n");
-	len2 = printf("%%\n");
-	printf("New: %d; Real: %d\n", len, len2);
-	printf("------------------\n");
-
-	len = _printf("Char%: % cst test\n", 'H');
-	len2 = printf("Char%: % cst test\n", 'H');
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
 
@@ -62,23 +52,13 @@ int main(void)
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
 
-	len = _printf("%     \n");
-	len2 = printf("%     \n");
-	printf("New: %d; Real: %d\n", len, len2);
-	printf("------------------\n");
-
 	len = _printf("Este es %s cero \n", (char *)0);
 	len2 = printf("Este es %s cero \n", (char *)0);
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
 
 	len = _printf(NULL);
-	/* len2 = printf(NULL);	*/
-	printf("New: %d; Real: %d\n", len, len2);
-	printf("------------------\n");
-
-	len = _printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
-	len2 = printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
+	len2 = printf(NULL);
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
 
@@ -86,9 +66,29 @@ int main(void)
 	len2 = printf("REAL: %%s\n");
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
-
+*/
 	len = _printf("%%");
 	len2 = printf("%%");
+	printf("New: %d; Real: %d\n", len, len2);
+	printf("------------------\n");
+
+	len = _printf("%%\n");
+	len2 = printf("%%\n");
+	printf("New: %d; Real: %d\n", len, len2);
+	printf("------------------\n");
+
+	len = _printf("Char%: % cst test\n", 'H');
+	len2 = printf("Char%: % cst test\n", 'H');
+	printf("New: %d; Real: %d\n", len, len2);
+	printf("------------------\n");
+
+	len = _printf("%     \n");
+	len2 = printf("%     \n");
+	printf("New: %d; Real: %d\n", len, len2);
+	printf("------------------\n");
+
+	len = _printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
+	len2 = printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
 
