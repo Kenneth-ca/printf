@@ -27,8 +27,8 @@ int main(void)
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
 
-	len = _printf("%");
-	len2 = printf("%");
+	len = _printf("%%\n");
+	len2 = printf("%%\n");
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
 
