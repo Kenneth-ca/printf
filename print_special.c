@@ -10,6 +10,6 @@
 int print_special(va_list *params)
 {
 	char c = va_arg(*params, int);
-	
+
 	return (c + 0);
 }

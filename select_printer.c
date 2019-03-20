@@ -8,7 +8,7 @@
  */
 printer_t select_printer(char format)
 {
-	int i, formats = 10;
+	int i, formats = 11;
 	printer_t printers[] = {
 		{'c', print_char},
 		{'s', print_string},
@@ -20,6 +20,7 @@ printer_t select_printer(char format)
 		{'X', print_hexa},
 		{'b', print_binary},
 		{'*', print_special}
+		{'R', print_rot13}
 	};
 
 	for (i = 0; i < formats; i++)
