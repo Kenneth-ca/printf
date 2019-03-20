@@ -1,7 +1,7 @@
 # \_printf
 
 ## Prototype
-
+`int_printf(const char *format, ...);`
 ## Usage
 
 ## Format Specifiers
@@ -16,6 +16,9 @@ File | Description
 `print_double.c` | Contain function that prints a double
 `print_octal.c` | Contain function that converts a number to octal
 `print_hexa.c` | Contain function that converts a number to hexadecimal
+`print_mini_hexa.c` | Contain function that converts a number to hexadecimal (lowcase)
+`print_special.c` | Contain function that handles % format
+`select_printer.c` | Contain function that contains a structure for the formats
 
 ## Autors
 
