@@ -92,5 +92,10 @@ int main(void)
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
 
+	len = _printf("Si funciona: %r\n", "Holberton");
+	len2 = printf("Si funciona: %s\n", "notrebloH");
+	printf("New: %d; Real: %d\n", len, len2);
+	printf("------------------\n");
+
 	return (0);
 }
