@@ -73,7 +73,7 @@ int main(void)
 	printf("------------------\n");
 
 	len = _printf(NULL);
-	//len2 = printf(NULL);	
+	/* len2 = printf(NULL);	*/
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
 
