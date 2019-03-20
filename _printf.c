@@ -14,12 +14,8 @@ int _printf(const char *format, ...)
 	va_list params;
 	printer_t current_printer;
 	int i = 0, putchar_flag = 1, length = 0;
-	
-	printf("Passing NULL format: %x, %c\n", format, *format);
-	if (!*format)
-		return (-1);
-	printf("Passing NULL format: %x, %c\n", format, *format);
-	if (format[0] == '%' && !format[1])
+
+	if ((format == NULL) || (format[0] == '%' && !format[1]))
 		return (-1);
 	va_start(params, format);
 	while (format[i] != '\0')

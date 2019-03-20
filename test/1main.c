@@ -47,11 +47,6 @@ int main(void)
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
 
-	len = _printf("NEW: %%s\n");
-	len2 = printf("REAL: %%s\n");
-	printf("New: %d; Real: %d\n", len, len2);
-	printf("------------------\n");
-
 	len = _printf("%");
 	len2 = printf("%");
 	printf("New: %d; Real: %d\n", len, len2);
@@ -78,8 +73,24 @@ int main(void)
 	printf("------------------\n");
 
 	len = _printf(NULL);
-	len2 = printf(NULL);
+	//len2 = printf(NULL);	
 	printf("New: %d; Real: %d\n", len, len2);
 	printf("------------------\n");
+
+	len = _printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
+	len2 = printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
+	printf("New: %d; Real: %d\n", len, len2);
+	printf("------------------\n");
+
+	len = _printf("NEW: %%s\n");
+	len2 = printf("REAL: %%s\n");
+	printf("New: %d; Real: %d\n", len, len2);
+	printf("------------------\n");
+
+	len = _printf("%%");
+	len2 = printf("%%");
+	printf("New: %d; Real: %d\n", len, len2);
+	printf("------------------\n");
+
 	return (0);
 }
