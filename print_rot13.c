@@ -10,29 +10,29 @@
  */
 int print_rot13(va_list *params)
 {
-	int length = 0, k;
+	int length = 0, i = 0, k;
 	char from[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char to[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	char *str = va_arg(*params, char *);
 
+	while (str[length])
+		length++;
 	if (str == NULL)
 	{
 		str = "(null)";
 	}
-	for (length = 0; str[length] != '\0' ; length++)
+	for (i = 0; str[i] != '\0' ; i++)
 	{
 		k = 0;
 		while (str[k])
 		{
-			if (str[length] == from[k])
+			if (str[i] == from[k])
 			{
-				str[length] = to[k];
+				_putchar(to[k]);
 				break;
 			}
 			k++;
 		}
-		_putchar(str[length]);
-		length++;
 	}
 
 	return (length);
