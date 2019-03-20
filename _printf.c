@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 			else
 			{
 				/* ToDO: Add condition for blanks */
-				length += _putchar(format[i]) + 1;
+				length += _putchar(format[i]);
 				putchar_flag = 1;
 			}
 		i++;
