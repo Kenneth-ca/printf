@@ -30,5 +30,6 @@ int print_mini_hexa(va_list *);
 int print_binary(va_list *);
 int print_special(va_list *);
 int print_rot13(va_list *params);
+int print_reverse(va_list *);
 
 #endif
